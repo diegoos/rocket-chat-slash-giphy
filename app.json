@@ -1,0 +1,15 @@
+{
+    "id": "0300390c-6e5d-4998-bb8b-99a5fb8ef510",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.3.2",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Diego Oliveira",
+        "homepage": "https://diegoos.com",
+        "support": "https://github.com/diegoos/rocket-chat-slash-giphy"
+    },
+    "name": "Rocket Chat SlashGiphy",
+    "nameSlug": "rc-slashgiphy",
+    "classFile": "index.ts",
+    "description": "A Giphy integration"
+}
