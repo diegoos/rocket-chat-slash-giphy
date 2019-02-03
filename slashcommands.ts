@@ -20,7 +20,7 @@ export class BGiphySlashCommands implements ISlashCommand {
 
     public async previewer(context: SlashCommandContext, read: IRead, modify: IModify, http: IHttp, persis: IPersistence): Promise<ISlashCommandPreview> {
         const i18nTitle = 'Giphy: ';
-        const gifs = await giphy.getGifs('cat', http);
+        const gifs = await giphy.getGifs(context.getArguments().join(' '), http);
         const items = new Array();
 
         for (const item of gifs) {
