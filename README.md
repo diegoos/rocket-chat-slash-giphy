@@ -16,3 +16,7 @@ This app adds the slash command `/giphy gifterm` to the Rocket Chat and makes po
 - Paste the Giphy Api Key in the settings.
 
 _You can create an APP and get the `Api Key` here: https://developers.giphy.com/_
+
+## Licence
+
+[MIT](https://github.com/diegoos/rocket-chat-slash-giphy/blob/master/LICENSE)
