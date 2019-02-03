@@ -6,7 +6,7 @@ import { App } from '@rocket.chat/apps-engine/definition/App';
 
 import { giphy } from './giphy';
 
-export class BGiphySlashCommands implements ISlashCommand {
+export class SlashGiphy implements ISlashCommand {
     public command = 'giphy';
     public i18nParamsExample = 'slashcommand_params';
     public i18nDescription = 'command_description';
@@ -19,8 +19,8 @@ export class BGiphySlashCommands implements ISlashCommand {
     }
 
     public async previewer(context: SlashCommandContext, read: IRead, modify: IModify, http: IHttp, persis: IPersistence): Promise<ISlashCommandPreview> {
-        const i18nTitle = 'Giphy: ';
-        const gifs = await giphy.getGifs(context.getArguments().join(' '), http);
+        const i18nTitle = 'Giphy for: ';
+        const gifs = await giphy.getGifs(context.getArguments().join(' '), http, read);
         const items = new Array();
 
         for (const item of gifs) {

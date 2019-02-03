@@ -1,0 +1,6 @@
+{
+    "slashcommand_params": "gif",
+    "command_description": "gifterm or use quotes for multi terms \"the gif term\"",
+    "giphy_api_key": "Giphy API Key",
+    "giphy_api_key_desciption": "Key from Giphy, created on developers.giphy.com"
+}

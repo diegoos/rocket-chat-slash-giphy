@@ -6,7 +6,9 @@ import {
 import { App } from '@rocket.chat/apps-engine/definition/App';
 import { IAppInfo } from '@rocket.chat/apps-engine/definition/metadata';
 
-import { BGiphySlashCommands } from './slashcommands';
+import { SlashGiphy } from './slashcommands';
+
+import { SettingType } from '@rocket.chat/apps-engine/definition/settings';
 
 export class BGiphyApp extends App {
     constructor(info: IAppInfo, logger: ILogger) {
@@ -14,6 +16,16 @@ export class BGiphyApp extends App {
     }
 
     public async extendConfiguration(configuration: IConfigurationExtend, environmentRead: IEnvironmentRead): Promise<void> {
-        configuration.slashCommands.provideSlashCommand(new BGiphySlashCommands(this));
+        configuration.slashCommands.provideSlashCommand(new SlashGiphy(this));
+
+        configuration.settings.provideSetting({
+            id: 'giphy_api_key',
+            type: SettingType.STRING,
+            packageValue: '',
+            required: true,
+            public: false,
+            i18nLabel: 'giphy_api_key',
+            i18nDescription: 'giphy_api_key_desciption',
+        });
     }
 }

@@ -1,0 +1,6 @@
+{
+    "slashcommand_params": "gif",
+    "command_description": "termodogif ou para mais de um termo use aspas \"termo do gif\"",
+    "giphy_api_key": "Giphy API Key",
+    "giphy_api_key_desciption": "Chave da API do Giphy, criada em developers.giphy.com"
+}
